@@ -1,0 +1,196 @@
+<!doctype html><html lang="en" data-theme="dark" style="color-scheme: dark;"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yetis Stuco Soccer Interaulas (Copy)</title>
+<style>
+:root{--bg:#eef5fb;--card:#fff;--ink:#0e2233;--mut:#5b7285;--ac:#1f7fd1;--gf:#d6368a;--ln:#dce7f0;--gold:#f2b134;--w:#1b9a52;--l:#d64545;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08121b;--card:#102230;--ink:#e6f1fa;--mut:#8fa6b8;--ac:#5db2ff;--gf:#ff6fb5;--ln:#1f3445}}
+:root[data-theme="dark"]{--bg:#08121b;--card:#102230;--ink:#e6f1fa;--mut:#8fa6b8;--ac:#5db2ff;--gf:#ff6fb5;--ln:#1f3445}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px}
+.hero{background:linear-gradient(135deg,#072c52,#1f7fd1 65%,#7fd3ff);color:#fff;border-radius:18px;padding:18px;position:relative;overflow:hidden}
+.hero:after{content:"❄";position:absolute;right:-8px;top:-24px;font-size:120px;opacity:.15}
+h1{margin:0;font-size:24px;line-height:1.15}.sub{opacity:.85;font-size:13px;margin-top:4px}
+.st{display:flex;gap:8px;margin-top:14px}.st div{flex:1;background:rgba(255,255,255,.16);border-radius:12px;padding:8px;text-align:center}.st b{display:block;font-size:20px}.st span{font-size:11px;opacity:.85}
+.pb{height:6px;background:rgba(255,255,255,.25);border-radius:9px;margin-top:12px}.pb i{display:block;height:100%;background:#fff;border-radius:9px}
+.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:12px 0}
+button,select{font:inherit;border:1px solid var(--ln);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 13px;cursor:pointer}
+button.on{background:var(--ac);border-color:var(--ac);color:#fff}button.pri{background:var(--ac);border-color:var(--ac);color:#fff}
+.tabs{display:flex;background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:3px}.tabs button{flex:1;border:0;background:none;border-radius:11px}.tabs button.on{background:var(--ac)}
+h2{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin:20px 0 8px}
+h3{margin:14px 0 6px;font-size:15px;border-left:4px solid var(--ac);padding-left:8px}h3.g{border-color:var(--gf)}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:10px 12px}
+.nx{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}.nx .tag{font-size:11px;font-weight:700;color:var(--ac)}.nx .tag.t{color:#fff;background:var(--l);padding:1px 7px;border-radius:9px;animation:p 1.4s infinite}
+@keyframes p{50%{opacity:.5}}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--ln);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:13px;white-space:nowrap}th,td{padding:8px 7px;text-align:center;border-bottom:1px solid var(--ln)}th{color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase}
+td:first-child,th:first-child{text-align:left}tr:last-child td{border:0}tr.lead td:first-child{box-shadow:inset 3px 0 var(--gold)}
+tr.today{background:color-mix(in srgb,var(--ac) 12%,transparent)}
+a[data-team]{cursor:pointer;color:inherit}a[data-team]:hover{color:var(--ac)}i.gr{font-style:normal;font-size:10px;color:var(--mut);margin-left:3px}
+.win{font-weight:700}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin:0 1px;background:var(--mut)}.dot.W{background:var(--w)}.dot.L{background:var(--l)}
+.vs{color:var(--mut)}.tg{font-weight:700;color:var(--l)}
+.rc{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}.rc .m{font-size:12px;color:var(--mut);margin-bottom:4px}
+.rc .l{display:flex;justify-content:space-between;padding:2px 0}.rc .l b{font-size:18px}
+input[type=number]{width:42px;padding:4px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit;text-align:center}
+#pub{position:sticky;bottom:calc(8px + env(safe-area-inset-bottom,0px));display:none;justify-content:space-between;align-items:center;background:var(--ink);color:var(--bg);border-radius:14px;padding:10px 12px;margin-top:12px}#pub.show{display:flex}
+input[type=text]{padding:4px 8px;border:1px solid var(--ln);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.tx{width:100%;min-width:150px}td.nt{text-align:left;white-space:normal;min-width:140px}.xb{padding:2px 9px;color:var(--l)}
+</style></head><body>
+<main><div id="app"></div></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script id="d" type="application/json">{"adj":{"Chispazos":-1,"Jags":-1},"upd":"2026-10-01T17:52:11.639Z","rows":[["B",1,"09-07","A","Fortnite (12)","Chifladitos (9)",1,0],["G",1,"09-08","","Ponys (11)","Jags (12)",0,7],["B",2,"09-09","B","Sin Espinas (12)","Motoneta (9)",2,1],["G",2,"09-10","","Osas Mañosas (12)","Innombrables (11)",1,2],["B",3,"09-16","A","Papitos (11)","Trocos (10)",4,1],["G",3,"09-17","","Las Cabritas (9)","Troncas (10)",5,0],["B",4,"09-18","B","Osos Mañosos (12)","La Banca (11)",0,1],["B",5,"09-22","A","Chifladitos (9)","Papitos (11)",0,9],["G",4,"09-23","","Ponys (11)","Innombrables (11)",3,1],["B",6,"09-24","A","Chispazos (10)","Fortnite (12)",0,1],["G",5,"09-25","","Jags (12)","Troncas (10)",4,2],["B",7,"09-28","B","Toros FC (11)","Sin Espinas (12)",0,3],["G",6,"09-29","","Osas Mañosas (12)","Las Cabritas (9)",0,1],["B",8,"09-30","B","Motoneta (9)","Osos Mañosos (12)",4,0],["G",7,"10-01","","Ponys (11)","Troncas (10)",null,null],["B",9,"10-05","A","Trocos (10)","Chispazos (10)",null,null],["G",8,"10-06","","Innombrables (11)","Las Cabritas (9)",null,null],["B",10,"10-07","B","La Banca (11)","Toros FC (11)",null,null],["G",9,"10-08","","Jags (12)","Osas Mañosas (12)",null,null],["B",11,"10-09","A","Fortnite (12)","Papitos (11)",null,null],["G",10,"10-12","","Ponys (11)","Las Cabritas (9)",null,null],["B",12,"10-12","B","Motoneta (9)","Toros FC (11)",null,null],["G",11,"10-14","","Troncas (10)","Osas Mañosas (12)",null,null],["B",13,"10-15","A","Chifladitos (9)","Chispazos (10)",null,null],["G",12,"10-16","","Ponys (11)","Osas Mañosas (12)",null,null],["B",14,"10-21","B","Sin Espinas (12)","Osos Mañosos (12)",null,null],["G",13,"10-22","","Innombrables (11)","Jags (12)",null,null],["B",15,"10-23","A","Fortnite (12)","Trocos (10)",null,null],["G",14,"10-26","","Las Cabritas (9)","Jags (12)",null,null],["B",16,"10-27","B","Sin Espinas (12)","La Banca (11)",null,null],["G",15,"10-28","","Troncas (10)","Innombrables (11)",null,null],["B",17,"10-30","A","Papitos (11)","Chispazos (10)",null,null],["B",18,"11-02","B","Osos Mañosos (12)","Toros FC (11)",null,null],["B",19,"11-03","A","Trocos (10)","Chifladitos (9)",null,null],["B",20,"11-04","B","Motoneta (9)","La Banca (11)",null,null]]}</script>
+<script>
+const D=JSON.parse(document.getElementById('d').textContent);
+let view='st',tab='all',team='',edit=false,owner=false,editor=false,dirty=false,dl=null;
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const mk=()=>{dirty=true;const e=document.querySelector('#pub');if(e)e.classList.add('show')};
+const $=s=>document.querySelector(s);
+const T=t=>t.replace(/\s*\(\d+\)/,''),G=t=>(t.match(/\((\d+)\)/)||[])[1]||'';
+const pl=r=>r[6]!=null&&r[7]!=null,dv=r=>r[0]=='G'?'Girls':'Boys '+r[3];
+const dt=r=>new Date('2026-'+r[2]+'T12:00'),fm=r=>dt(r).toLocaleDateString('en',{month:'short',day:'numeric'});
+const n0=new Date(),td=new Date(n0.getFullYear(),n0.getMonth(),n0.getDate(),12),dd=r=>Math.round((dt(r)-td)/864e5);
+const wn=r=>r[6]>r[7]?T(r[4]):r[7]>r[6]?T(r[5]):'Draw';
+const F=()=>D.rows.filter(r=>(tab=='all'||r[0]==tab)&&(!team||T(r[4])==team||T(r[5])==team));
+const tm=(t,r)=>`<a data-team="${T(t)}" class="${pl(r)&&wn(r)==T(t)?'win':''}">${T(t)}<i class="gr">${G(t)}</i></a>`;
+function stand(){
+  const ds={};
+  D.rows.filter(r=>tab=='all'||r[0]==tab).forEach(r=>{
+    const d=ds[dv(r)]=ds[dv(r)]||{};
+    [r[4],r[5]].forEach(t=>d[t]=d[t]||{n:T(t),g:G(t),p:0,w:0,d:0,l:0,f:0,a:0,pts:0,fm:[]});
+    if(!pl(r))return;
+    [[r[4],r[6],r[7]],[r[5],r[7],r[6]]].forEach(([t,f,a])=>{
+      const s=d[t],k=f>a?'W':f==a?'D':'L';s.p++;s.f+=f;s.a+=a;s.fm.push(k);
+      if(k=='W'){s.w++;s.pts+=3}else if(k=='D'){s.d++;s.pts++}else s.l++;
+    });
+  });
+  return Object.keys(ds).sort().map(k=>{
+    Object.values(ds[k]).forEach(s=>{s.adj=(D.adj&&D.adj[s.n])||0;s.pts+=s.adj});
+    const L=Object.values(ds[k]).sort((a,b)=>b.pts-a.pts||(b.f-b.a)-(a.f-a.a)||b.f-a.f);
+    return `<h3 class="${k=='Girls'?'g':''}">${k}</h3><div class="tw"><table><tr><th>#</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>Pts${edit&&owner?' (± adj)':''}</th><th>Form</th></tr>${
+    L.map((s,i)=>`<tr class="${i==0&&s.p?'lead':''}"><td>${i+1}</td><td style="text-align:left"><a data-team="${s.n}">${s.n}<i class="gr">${s.g}</i></a></td><td>${s.p}</td><td>${s.w}</td><td>${s.d}</td><td>${s.l}</td><td>${s.f}</td><td>${s.a}</td><td>${s.f-s.a>0?'+':''}${s.f-s.a}</td><td><b>${s.pts}</b>${s.adj?`<i class="gr">(${s.adj>0?'+':''}${s.adj})</i>`:''}${edit&&owner?` <input type="number" step="1" inputmode="numeric" title="Point adjustment" data-adj="${s.n}" value="${s.adj||''}" placeholder="±">`:''}</td><td>${s.fm.slice(-5).map(x=>`<span class="dot ${x}"></span>`).join('')||'–'}</td></tr>`).join('')}</table></div>`;
+  }).join('');
+}
+function fp(){
+  const dm={};D.rows.forEach(r=>[r[4],r[5]].forEach(t=>dm[T(t)]=dv(r)));
+  const E=edit&&editor,sp=D.sp||{},S=n=>sp[n]||{s:'',n:''},H=v=>v!==''&&v!=null;
+  const ok=n=>(tab=='all'||(tab=='G')==(dm[n]=='Girls'))&&(!team||n==team);
+  const L=Object.keys(dm).filter(ok).sort((a,b)=>{const x=S(a).s,y=S(b).s;return H(x)&&H(y)?y-x||a.localeCompare(b):H(x)?-1:H(y)?1:a.localeCompare(b)});
+  const rows=L.map((n,i)=>{const s=S(n),h=H(s.s);return `<tr><td>${h?i+1:'–'}</td><td style="text-align:left"><b>${esc(n)}</b></td><td>${dm[n]}</td><td>${E?`<input type="number" step="0.5" data-sp="${esc(n)}" data-f="s" value="${h?s.s:''}">`:h?`<b>${s.s}</b>`:'–'}</td><td class="nt">${E?`<input type="text" class="tx" data-sp="${esc(n)}" data-f="n" value="${esc(s.n)}" placeholder="Notes">`:esc(s.n)||'<span class="vs">–</span>'}</td></tr>`}).join('');
+  const names=Object.keys(dm).sort(),A=(D.sanc||[]).map((x,i)=>[x,i]).filter(([x])=>!x.t||ok(x.t));
+  const sr=A.map(([x,i])=>E?`<tr><td><input type="text" style="width:84px" data-sx="${i}" data-k="d" value="${esc(x.d)}" placeholder="Date"></td><td><select data-sx="${i}" data-k="t"><option value="">Team…</option>${names.map(n=>`<option ${n==x.t?'selected':''}>${esc(n)}</option>`).join('')}</select></td><td class="nt"><input type="text" class="tx" data-sx="${i}" data-k="r" value="${esc(x.r)}" placeholder="Reason"></td><td><input type="text" style="width:110px" data-sx="${i}" data-k="p" value="${esc(x.p)}" placeholder="Penalty"></td><td><button class="xb" data-del="${i}" title="Remove">✕</button></td></tr>`
+    :`<tr><td>${esc(x.d)||'–'}</td><td style="text-align:left"><b>${esc(x.t)||'–'}</b></td><td class="nt">${esc(x.r)}</td><td>${esc(x.p)}</td></tr>`).join('')||`<tr><td colspan="4" class="vs" style="text-align:left">No sanctions recorded.</td></tr>`;
+  return `<div class="tw"><table><tr><th>#</th><th>Team</th><th>Division</th><th>Score</th><th style="text-align:left">Notes</th></tr>${rows}</table></div>
+  <h2>Sanctions</h2><div class="tw"><table><tr><th style="text-align:left">Date</th><th>Team</th><th style="text-align:left">Reason</th><th>Penalty</th>${E?'<th></th>':''}</tr>${sr}</table></div>${E?'<div class="row"><button data-add="1">+ Add sanction</button></div>':''}`;
+}
+function sched(){
+  const rs=F();
+  return `<div class="tw"><table><tr><th>Game</th><th>Date (STC)</th><th>Grupo</th><th>Team 1</th><th>Team 2</th><th>Score</th></tr>${rs.map(r=>{
+    const i=D.rows.indexOf(r),d=dd(r);
+    const sc=edit&&owner?`<input type="number" min="0" inputmode="numeric" data-i="${i}" data-k="6" value="${r[6]??''}"> - <input type="number" min="0" inputmode="numeric" data-i="${i}" data-k="7" value="${r[7]??''}">`
+      :pl(r)?`${Math.max(r[6],r[7])} - ${Math.min(r[6],r[7])} <b>${wn(r)}</b>`:d==0?'<span class="tg">TODAY</span>':`<span class="vs">${d>0?'in '+d+'d':'—'}</span>`;
+    return `<tr class="${d==0?'today':''}"><td>${r[0]} Game ${r[1]}</td><td>${fm(r)}</td><td>${r[3]||'–'}</td><td>${tm(r[4],r)}</td><td>${tm(r[5],r)}</td><td>${sc}</td></tr>`}).join('')}</table></div>`;
+}
+function results(){
+  const rs=F().filter(pl).reverse();
+  return `<div class="rc">${rs.map(r=>`<div class="card"><div class="m">${fm(r)} · ${dv(r)} · Game ${r[1]}</div>${[[4,6],[5,7]].map(([a,b])=>`<div class="l ${wn(r)==T(r[a])?'win':''}"><span>${T(r[a])} <i class="gr">${G(r[a])}</i></span><b>${r[b]}</b></div>`).join('')}</div>`).join('')||'<div class="vs">No results yet.</div>'}</div>`;
+}
+function render(){
+  const all=D.rows,pd=all.filter(pl),goals=pd.reduce((s,r)=>s+r[6]+r[7],0);
+  const up=F().filter(r=>!pl(r)).slice(0,3);
+  const names=[...new Set(all.flatMap(r=>[T(r[4]),T(r[5])]))].sort();
+  const seg=(k,l,c)=>`<button class="${c==k?'on':''}" data-${c==view?'v':'g'}="${k}">${l}</button>`;
+  $('#app').innerHTML=`<div class="hero"><h1>❄️ Yetis Stuco Soccer Interaulas</h1><div class="sub">Group phase · Sep 7 – Nov 4${D.upd?' · Updated '+new Date(D.upd).toLocaleString('en',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):''}</div>
+  <div class="st"><div><b>${pd.length}/${all.length}</b><span>Games played</span></div><div><b>${goals}</b><span>Goals</span></div><div><b>${pd.length?(goals/pd.length).toFixed(1):'0'}</b><span>Per game</span></div></div>
+  <div class="pb"><i style="width:${pd.length/all.length*100}%"></i></div></div>
+  <div class="row"><div class="tabs" style="flex:1">${[['st','Standings'],['sc','Schedule'],['rs','Results'],['fp','Fair play']].map(([k,l])=>`<button class="${view==k?'on':''}" data-v="${k}">${l}</button>`).join('')}</div></div>
+  <div class="row">${[['all','All'],['B','Boys'],['G','Girls']].map(([k,l])=>`<button class="${tab==k?'on':''}" data-g="${k}">${l}</button>`).join('')}
+  <select id="ts"><option value="">All teams</option>${names.map(n=>`<option ${n==team?'selected':''}>${n}</option>`).join('')}</select>
+  ${dl?`<button data-pdf="1" style="margin-left:auto">⬇ Download PDF</button>`:''}
+  ${(view=='fp'?editor:owner)?`<button data-edit="1" class="${edit?'on':''}" style="${dl?'':'margin-left:auto'}">${edit?'Done editing':view=='fp'?'✏️ Edit':'✏️ Edit scores'}</button>`:''}</div>
+  ${up.length&&view!='fp'?`<h2>Next up</h2><div class="nx">${up.map(r=>{const d=dd(r);return `<div class="card"><span class="tag ${d==0?'t':''}">${d==0?'TODAY':d>0?'IN '+d+' DAYS':fm(r)}</span> <span class="vs">${fm(r)} · ${dv(r)}</span><div><b>${T(r[4])}</b> vs <b>${T(r[5])}</b></div></div>`}).join('')}</div>`:''}
+  ${edit&&editor&&view=='fp'?'<div class="vs" style="font-size:12px;margin-top:10px">Edit mode: change scores, notes and sanctions, then tap Publish.</div>':''}${edit&&owner&&view=='st'?'<div class="vs" style="font-size:12px;margin-top:10px">Edit mode: type a number in the Pts column to add (e.g. 1) or remove (e.g. -2) points for a team. Leave empty for none. Then tap Publish.</div>':''}<h2>${{st:'Standings',sc:'Full schedule',rs:'Results',fp:'Sportsmanship'}[view]}</h2>${{st:stand,sc:sched,rs:results,fp:fp}[view]()}
+  <div id="pub" class="${dirty?'show':''}"><span id="msg">Unpublished changes</span><button class="pri" data-save="1">Publish</button></div>`;
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-v],[data-g],[data-team],[data-edit],[data-save],[data-pdf],[data-add],[data-del]');if(!t)return;
+  const s=t.dataset;
+  if(s.v)view=s.v;if(s.g)tab=s.g;if(s.team){team=s.team;view='sc'}
+  if(s.edit){edit=!edit;if(view=='rs')view='sc'}
+  if(s.add){D.sanc=D.sanc||[];D.sanc.push({t:'',d:'',r:'',p:''});dirty=true}
+  if(s.del){if(!editor)return;D.sanc.splice(+s.del,1);dirty=true}
+  if(s.save)return save();
+  if(s.pdf)return pdf();
+  render();
+});
+document.addEventListener('change',e=>{
+  const t=e.target;
+  if(t.id=='ts'){team=t.value;if(team&&view=='st')view='sc';return render()}
+  if(t.dataset.adj!=null){
+    D.adj=D.adj||{};const v=parseInt(t.value)||0;
+    if(v)D.adj[t.dataset.adj]=v;else delete D.adj[t.dataset.adj];
+    render();mk();return}
+  if(t.dataset.sp!=null){if(!editor)return;D.sp=D.sp||{};const n=t.dataset.sp,o=D.sp[n]=D.sp[n]||{s:'',n:''};
+    o[t.dataset.f]=t.dataset.f=='s'?(t.value===''?'':parseFloat(t.value)):t.value;
+    if(o.s===''&&!o.n)delete D.sp[n];return mk()}
+  if(t.dataset.sx!=null){if(!editor)return;D.sanc[+t.dataset.sx][t.dataset.k]=t.value;return mk()}
+  if(t.dataset.i==null)return;
+  D.rows[+t.dataset.i][+t.dataset.k]=t.value===''?null:Math.max(0,parseInt(t.value)||0);
+  mk();
+});
+
+async function pdf(){
+  try{
+    const {jsPDF}=window.jspdf,doc=new jsPDF({unit:'pt',format:'letter'});
+    const MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const f2=r=>MN[+r[2].slice(0,2)-1]+' '+(+r[2].slice(3));
+    const pd=D.rows.filter(pl),goals=pd.reduce((s,r)=>s+r[6]+r[7],0);
+    const stamp=new Date().toLocaleDateString('en',{month:'short',day:'numeric',year:'numeric'});
+    doc.setFontSize(20);doc.setFont('helvetica','bold');doc.text('Yetis Stuco Soccer Interaulas',36,48);
+    doc.setFontSize(10);doc.setFont('helvetica','normal');
+    doc.text('Group phase, Sep 7 - Nov 4  |  Updated '+stamp+'  |  '+pd.length+'/'+D.rows.length+' games played  |  '+goals+' goals'+(pd.length?' ('+(goals/pd.length).toFixed(1)+' per game)':''),36,64);
+    const ds={};
+    D.rows.forEach(r=>{const d=ds[dv(r)]=ds[dv(r)]||{};[r[4],r[5]].forEach(t=>d[T(t)]=d[T(t)]||{g:G(t),p:0,w:0,d:0,l:0,f:0,a:0,pts:0});
+      if(!pl(r))return;[[r[4],r[6],r[7]],[r[5],r[7],r[6]]].forEach(([t,f,a])=>{const s=d[T(t)];s.p++;s.f+=f;s.a+=a;if(f>a){s.w++;s.pts+=3}else if(f==a){s.d++;s.pts++}else s.l++})});
+    const AJ=D.adj||{};Object.values(ds).forEach(d=>Object.keys(d).forEach(n=>{d[n].adj=AJ[n]||0;d[n].pts+=d[n].adj}));
+    let y=84;
+    Object.keys(ds).sort().forEach(k=>{
+      const L=Object.entries(ds[k]).sort((a,b)=>b[1].pts-a[1].pts||(b[1].f-b[1].a)-(a[1].f-a[1].a)||b[1].f-a[1].f);
+      doc.autoTable({startY:y,head:[['#','Team '+'('+k+')','Gr','P','W','D','L','GF','GA','GD','Pts']],
+        body:L.map(([n,s],i)=>[i+1,n,s.g,s.p,s.w,s.d,s.l,s.f,s.a,(s.f-s.a>0?'+':'')+(s.f-s.a),s.pts+(s.adj?' ('+(s.adj>0?'+':'')+s.adj+')':'')]),
+        theme:'grid',styles:{fontSize:9,halign:'center'},columnStyles:{1:{halign:'left',cellWidth:150}},
+        headStyles:{fillColor:k=='Girls'?[214,54,138]:[31,127,209]},margin:{left:36,right:36}});
+      y=doc.lastAutoTable.finalY+16;
+    });
+    doc.addPage();
+    doc.setFontSize(13);doc.setFont('helvetica','bold');doc.text('Results',36,48);
+    doc.autoTable({startY:56,head:[['Date','Division','Game','Team 1','Score','Team 2']],
+      body:pd.map(r=>[f2(r),dv(r),r[1],T(r[4]),r[6]+' - '+r[7],T(r[5])]),
+      theme:'striped',styles:{fontSize:9},headStyles:{fillColor:[31,127,209]},margin:{left:36,right:36}});
+    const up=D.rows.filter(r=>!pl(r));
+    if(up.length){
+      const y2=doc.lastAutoTable.finalY+24;
+      doc.setFontSize(13);doc.text('Upcoming schedule',36,y2);
+      doc.autoTable({startY:y2+8,head:[['Date','Division','Game','Team 1','Team 2']],
+        body:up.map(r=>[f2(r),dv(r),r[1],T(r[4]),T(r[5])]),
+        theme:'striped',styles:{fontSize:9},headStyles:{fillColor:[31,127,209]},margin:{left:36,right:36}});
+    }
+    await dl.save({filename:'Yetis_Stuco_Soccer_Interaulas.pdf',data:doc.output('arraybuffer')});
+  }catch(err){if(!err||err.code!=='declined')alert('Could not create the PDF.')}
+}
+async function save(){
+  const m=$('#msg');
+  try{
+    const a=await window.claude.use('artifact');if(!a)throw 0;
+    D.upd=new Date().toISOString();
+    const c=document.documentElement.cloneNode(true);
+    c.querySelector('#app').innerHTML='';c.querySelector('#d').textContent=JSON.stringify(D).replace(/</g,'\\u003c');
+    m.textContent='Publishing…';
+    await a.publish('<!doctype html>'+c.outerHTML);
+  }catch(err){m.textContent='Could not publish — only the owner can save.'}
+}
+render();
+(async()=>{try{const u=window.claude&&await window.claude.use('user');owner=!!(u&&u.isOwner());editor=owner||!!(u&&u.canEdit());}catch(e){}render()})();
+(async()=>{try{dl=window.claude&&await window.claude.use('downloads')}catch(e){}if(dl)render()})();
+</script>
+</body></html>
